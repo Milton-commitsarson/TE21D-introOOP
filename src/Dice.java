@@ -6,17 +6,35 @@
 
  */
 
+import java.util.Random;
+
 public class Dice {
-    //Egenskaper
+    //Attributes
     int sides = 6;
-    int sidesShowing = 1;
+
+    Random random = new Random();
+    int sidesShowing = random.nextInt(sides) +1;
+    //int sidesShowing = 1;
     String color = "red";
     Boolean weighted = false;
 
+    public Dice(){}
 
-    //Aktiviteter
+    public Dice(int newSides){
+        sides = newSides;
+    }
+
+
+
+    //Methods
     public void rollDice(){
+     Random random = new Random();
+     sidesShowing = random.nextInt(sides) +1;
+    }
 
+    //Change the number of sides
+    public void changeSides(){
+        sides = 15;
     }
 }
 
